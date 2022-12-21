@@ -4,14 +4,15 @@
 
 body{
   background-image: url(./laguna-negra.jpeg);
-  /* background-repeat: no-repeat; */
   background-size: 100%;
   margin: 0;
-  /* display: flex;  */
-  /* Activar display Si desea q el menu no abarque el ancho de la pagina */
 }
 
-/* .nav */
+.nav{
+  position: relative;
+  left: -100%;
+  transition: 0.5s all;
+}
 
 .menu{
   margin: 0;
@@ -41,13 +42,6 @@ body{
   cursor: pointer;
 }
 
-.nav{
-  position: relative;
-  left: -100%;
-  transition: 0.5s all;
-}
-
-/* Esta clase va después de configura menu.js */
 .mostrar{
   left: 0;
 }
