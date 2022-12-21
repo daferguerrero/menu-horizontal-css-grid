@@ -1,0 +1,79 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  background-image: url(./laguna-negra.jpeg);
+  /* background-repeat: no-repeat; */
+  background-size: 100%;
+  margin: 0;
+  /* display: flex;  */
+  /* Activar display Si desea q el menu no abarque el ancho de la pagina */
+}
+
+/* .nav */
+
+.menu{
+  margin: 0;
+  padding: 0;
+}
+
+.menu-item{
+  list-style: none;
+}
+
+.menu-link{
+  text-decoration: none;
+  display: block;
+  padding: 15px;
+  color: beige;
+  text-align: center;
+  background-color: brown;
+  font-size: 1em;
+}
+
+.menu-link:hover, .select{
+  background-color: beige;
+  color: brown;
+}
+
+#btn-menu{
+  cursor: pointer;
+}
+
+.nav{
+  position: relative;
+  left: -100%;
+  transition: 0.5s all;
+}
+
+/* Esta clase va después de configura menu.js */
+.mostrar{
+  left: 0;
+}
+
+@media(min-width:1024px){
+  .nav{
+    left: 0;
+  }
+
+  .menu{
+      display: grid;
+      grid-auto-flow: column;
+      grid-template-columns: repeat(auto-fill, 150px);
+  }
+
+  #btn-menu{
+    display: none;
+  }
+
+  .menu-link{
+    background: none;
+    font-size: 1.2em;
+  }
+
+  .select{
+    color: beige;
+    background: brown;
+  }
+}
